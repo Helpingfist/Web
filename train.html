@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TensorFlow.js Tutorial</title>
+
+<!-- Load TensorFlow.js -->
+<!-- Load TensorFlow.js with WebGL Backend -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl"></script>
+
+
+<!-- Load TensorFlow.js Visualization Library -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@latest"></script>
+
+
+  <!-- Import the data file -->
+<script src="data.js" type="module"></script>
+
+  <!-- Import the main script file -->
+<script src="script1.js" type="module"></script>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .input-container {
+    margin-bottom: 10px;
+  }
+
+  input {
+    padding: 5px;
+    margin: 5px;
+    width: 80px;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #218838;
+  }
+  ul {
+    list-style: none;
+  }
+</style>
+
+</head>
+<body>
+  <div class="input-container">
+    <label for="batch-size">Batch Size:</label>
+    <input type="number" id="batch-size" value="64" min="1">
+    
+    <label for="epochs">Epochs:</label>
+    <input type="number" id="epochs" value="10" min="1">
+  </div>
+  
+  <button id="train-button">Start Training</button>
+  <div id="progress">Training: 0%</div>
+  <br><br><br><br>
+  <h2 class="disclaimer">
+    Disclaimer! Start the training only when you are not using your Computer! <br>
+    Your computer may lag for a while during the training.
+  </h2><br><br><br>
+  <h2 class="instructions">
+    Instructions to use:
+    <ul>
+      <li>The Epoch number defines how many times the AI would iterate over the Training Dataset.</li>
+      <li> Higher is good for more accuracy, but may cost performance and time.</li><br>
+      <li>The Batch Size defines how many data inputs would be processed at a time. Lower is better for more Accuracy.</li><br>
+      <li>Make sure you have a stable internet and are equipped with a GPU. Discrete GPU would be better.</li><br>
+      <li>The training Datasets consist of around 60000 images. So, Grab a Cup of Coffee.</li><br>
+    </ul>
+  </h2>
+</body>
+</html>
